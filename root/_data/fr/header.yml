@@ -1,0 +1,14 @@
+menu:
+  - name: Projets
+    link: /projects/
+  - name: Billets
+    link: /posts/
+  - name: Contact
+    link: /contact/
+tools:
+  - name: Git
+    icon: /assets/img/icon.svg#git
+    link: https://git.hadrienlemaire.fr
+  - name: Markdown
+    icon: /assets/img/icon.svg#markdown
+    link: https://md.hadrienlemaire.fr

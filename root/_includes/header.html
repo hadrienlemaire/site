@@ -1,0 +1,33 @@
+<header>
+	<nav class="col-offset-3 col-6">
+		<a href="/" class="menu-home">
+			<span class="menu-home-text">Hadrien <span class="smallcaps">Lemaire</span></span>
+		</a>
+
+		<ul class="menu">
+			{% for tongue in site.languages %}
+			<li>
+				<a {% static_href %}href="{% if tongue == site.default_lang %}{{site.baseurl}}{{page.url}}{% else %}{{site.baseurl}}/{{ tongue }}{{page.url}}{% endif %}"{% endstatic_href %} class="menu-item">
+					<span class="menu-lang-text {% if tongue == site.active_lang %}menu-selected{% endif %}">{{ tongue }}</span>
+				</a>
+			</li>
+			{% endfor %}
+
+			<div class="menu-separator"></div>
+
+			{% for item in site.data.header.menu %}
+			<li><a href="{{ item.link }}" class="menu-item">
+					<span class="menu-text" name="{{ item.name }}">{{ item.name }}</span>
+			</a></li>
+			{% endfor %}
+
+			<div class="menu-separator"></div>
+
+			{% for item in site.data.header.tools %}
+			<li><a href="{{ item.link }}" class="menu-item menu-tool">
+				<svg viewBox="0 0 64 64" class="menu-img"><use href="{{ item.icon }}"/></svg>
+			</a></li>
+			{% endfor %}
+		</ul>
+	</nav>
+</header>

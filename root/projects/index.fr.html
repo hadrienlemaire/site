@@ -1,0 +1,30 @@
+---
+title: Projets
+permalink: /projects/
+layout: default
+lang: fr
+css:
+ - link: /assets/css/project-list.css
+---
+
+{% assign projects = site.posts | where: "category", "projects" %}
+
+<h1>Projets</h1>
+
+<div class="project-container">
+	{% for project in site.categories["projects"] %}
+	<div class="project-item">
+		<span class="project-item-title"><a href="{{ project.url }}">{{ project.title }}</a></span>
+		<a class="project-item-git" href="{{ project.git }}">
+			<span class="project-item-git-icon">
+				<svg viewBox="0 0 64 64"><use xlink:href="/assets/img/icon.svg#git-pull"></use></svg>
+			</span>
+			<span class="project-item-git-text">Git</span>
+		</a>
+		<span class="project-item-description">{{ project.description }}</span>
+	</div>
+	{% else %}
+	<p>Oups ! Cette page n’est pas encore remplie.</p>
+	{% endfor %}
+</div>
+

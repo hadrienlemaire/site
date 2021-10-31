@@ -1,0 +1,31 @@
+.meta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: smaller;
+}
+
+.meta a {
+	color: var(--fg);
+	background-image: linear-gradient(var(--fg), var(--fg));
+	background-position: 2em 100%;
+}
+
+.meta > * {
+	display: flex;
+	align-items: center;
+	gap: .5em;
+}
+
+.meta-icon {
+	display: flex;
+	align-items: center;
+}
+
+.meta-icon svg {
+	height: 1.5em;
+}
+
+.meta-tags .meta-text::before {
+	content: "#";
+}

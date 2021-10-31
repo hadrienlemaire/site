@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="author" content="{{ site.name }}">
+		<meta name="description" content="{{ site.description }}">
+
+		<title>{{ page.title }}</title>
+
+		<link href="/assets/css/layout.css" rel="stylesheet">
+		{% for file in page.css %}
+		<link href="{{ file.link }}" rel="stylesheet">
+		{% endfor %}
+		{% for file in layout.css %}
+		<link href="{{ file.link }}" rel="stylesheet">
+		{% endfor %}
+	</head>
+
+	<body class="dark">
+		{% include header.html %}
+
+		<main class="row">
+			<div class="col-offset-3 col-6 main-content">
+				{{ content }}
+				<!--h1>Coucou ! C’est Hadrien. <span class="wave">👋</span></h1>
+				<section>
+					<h2>Études</h2>
+
+					<h3>Ipsa Space Systems</h3>
+					<p>
+						<a href="https://ipsaspacesystems.wordpress.com/about/" target="_blank">Association étudiante</a>
+						pour laquelle j’ai été membre puis trésorier de 2016 à 2019.
+						J’ai participé au projet <a href="https://www.perseusproject.com/sera/" target="_blank">Perseus</a>
+						pour lequel j’ai notamment pris part à la fabriquation des fusex supersoniques SERA III et SERA IV.
+						J’ai d’ailleurs eu la chance de participer à la campagne de lancement de SERA III sur la base d’Esrange en Suède.<br>
+						Au sein de l’association nous avons également conçu, fabriqué puis lancé notre fusex du nom de « 
+						<a href="https://ipsaspacesystems.wordpress.com/diamant/" target="_blank">Diamant</a> » au 
+						<a href="https://www.planete-sciences.org/espace/C-Space/Presentation" target="_blank">C’Space</a> 2019.
+					</p>
+
+					<h3>IPSA</h3>
+					<p>
+						J’ai fait mes études supérieurs à l’<a href="https://www.ipsa.fr/" target="_blank">IPSA</a>,
+						une école d’ingénérie aéronautique et aérospatiale.
+						J’ai choisi la filière mécanique puis je me suis spécialisé au sein de la section « Espace, Lanceurs et Satellites ».
+					</p>
+				</section-->
+			</div>
+		</main>
+
+		{% include footer.html %}
+	</body>
+</html> 
+

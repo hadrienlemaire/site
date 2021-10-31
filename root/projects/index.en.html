@@ -1,0 +1,32 @@
+---
+title: Projects
+permalink: /projects/
+layout: default
+lang: en
+css:
+ - link: /assets/css/project-list.css
+---
+
+{% assign projects = site.posts | where: "category", "projects" %}
+
+<h1>Projects</h1>
+
+<div class="project-container">
+	{% for project in site.categories["projects"] %}
+	<div class="project-item">
+		<div class="project-item-title">
+			<a href="{{ project.url }}">{{ project.title }}</a>
+		</div>
+		<p class="project-item-description">{{ project.description }}</p>
+		<div class="project-item-git">
+			<a href="{{ project.git }}">Lien git</a>
+		</div>
+	</div>
+	{% else %}
+	<p>
+		Whoops! This page is empty.
+	</p>
+	{% endfor %}
+</div>
+
+

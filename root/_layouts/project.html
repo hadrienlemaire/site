@@ -1,0 +1,33 @@
+---
+layout: default
+css:
+ - link: /assets/css/post.css
+---
+
+<div class="meta">
+	<span class="meta-date">
+		<span class="meta-icon"><svg viewbox="0 0 64 64"><use xlink:href="/assets/img/icon.svg#calendar"/></svg></span>
+		<span class="meta-text">{{ page.date | l: "%e %B %Y", site.active_lang }}</span>
+	</span>
+
+	<span class="meta-tags">
+		<span class="meta-icon"><svg viewbox="0 0 64 64"><use xlink:href="/assets/img/icon.svg#tag"/></svg></span>
+		{% for tag in page.tags %}
+		<span class="meta-text">{{ tag }}</span>
+		{% endfor %}
+	</span>
+
+	<a href="" class="meta-code">
+		<span class="meta-icon"><svg viewbox="0 0 64 64"><use xlink:href="/assets/img/icon.svg#git-pull"/></svg></span>
+		<span class="meta-text">Git</span>
+	</a>
+
+	<a href="" class="meta-edit">
+		<span class="meta-icon"><svg viewbox="0 0 64 64"><use xlink:href="/assets/img/icon.svg#edit-markup"/></svg></span>
+		<span class="meta-text">Modifier ce document</span>
+	</a>
+</div>
+
+<article>
+	{{ content }}
+</article>

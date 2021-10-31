@@ -1,0 +1,28 @@
+---
+title: Posts
+permalink: /posts/
+layout: default
+lang: en
+css:
+ - link: /assets/css/post-list.css
+---
+
+<h1>Posts</h1>
+
+{% assign year = "" %}
+<div class="post-container">
+	{% for post in site.categories["posts"] %}
+		{% assign post_year = post.date | date: "%Y" %}
+		{% if year != post_year %}
+			{% assign year = post_year %}
+			<h2 class="post-newyear">{{ post_year }}</h2>
+		{% endif %}
+		<span class="post-date">{{ post.date | l: "%e %b", site.active_lang }}</span>
+		<span class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></span>
+	{% else %}
+	<p>
+		Whoops! This page is empty.
+	</p>
+	{% endfor %}
+</div>
+

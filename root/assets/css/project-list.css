@@ -1,0 +1,42 @@
+.project-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: .5em;
+}
+
+.project-item {
+	border: 1px solid var(--fg);
+	border-radius: .5em;
+	padding: .75em;
+
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: .5em;
+}
+
+.project-item-title {
+	font-size: larger;
+	font-weight: bold;
+}
+
+.project-item-git {
+	color: var(--fg);
+	background-image: linear-gradient(var(--fg), var(--fg));
+	background-position: 1.5em 100%;
+
+	display: flex;
+	align-items: center;
+}
+
+.project-item-git-icon {
+	display: flex;
+	align-items: center;
+}
+
+.project-item-git-icon svg {
+	height: 1.5em;
+}
+
+.project-item-description {
+	grid-column: 1/3;
+}
