@@ -6,6 +6,6 @@ lang: fr
 
 ---
 
-Pourquoi faire un site internet ?
+# Pourquoi faire un site internet ?
 
 
