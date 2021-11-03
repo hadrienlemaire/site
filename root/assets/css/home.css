@@ -6,7 +6,11 @@
 }
 
 
-/* https://jarv.is/notes/css-waving-hand-emoji/ */
+/*
+ * Jake Jarvis
+ * https://jarv.is/notes/css-waving-hand-emoji/
+ * https://creativecommons.org/licenses/by/4.0/
+ */
 .wave {
 	animation-name: wave-animation;
 	animation-duration: 2.5s;

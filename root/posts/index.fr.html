@@ -20,7 +20,7 @@ css:
 		<span class="post-date">{{ post.date | l: "%e %b", site.active_lang }}</span>
 		<span class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></span>
 	{% else %}
-	<p>
+	<p class="post-container-empty">
 		Oups ! Cette page n’est pas encore remplie.
 	</p>
 	{% endfor %}

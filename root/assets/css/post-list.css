@@ -10,7 +10,7 @@
 }
 
 h1 {
-	margin-bottom: 0;
+	/*margin-bottom: 0;*/
 }
 
 h2 {
@@ -24,4 +24,8 @@ h2 {
 .post-date {
 	font-size: large;
 	opacity: .75;
+}
+
+.post-container-empty {
+	grid-column: 1/3;
 }
